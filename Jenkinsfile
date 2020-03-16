@@ -72,6 +72,7 @@ pipeline
                 sh ('git config --global user.name "Hemal Gadhiya"')
                 sh ("git add --all")
                 sh ('git commit -m "testing jenkins ci/cd"')
+                sh ('git branch')
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                 sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/hemalgadhiya/helm-charts.git assignment9')
                 }
