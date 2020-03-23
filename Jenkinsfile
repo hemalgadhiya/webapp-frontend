@@ -53,7 +53,7 @@ pipeline
         {
             script
             {
-                git (branch: 'jenkins-test',
+                git (branch: 'assignment10',
                 	 credentialsId: githubCredential,
                      url: 'https://github.com/hemalgadhiya/helm-charts.git')
                 sh ("pwd")
@@ -73,7 +73,7 @@ pipeline
                 sh ("git add --all")
                 sh ('git commit -m "testing jenkins ci/cd"')
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/hemalgadhiya/helm-charts.git jenkins-test')
+                sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/hemalgadhiya/helm-charts.git assignment10')
                 }
             }
         }
