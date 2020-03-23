@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://backend.hgadhiya.me'
+  url: 'https://hgadhiya.me'
 };
 
 /*
