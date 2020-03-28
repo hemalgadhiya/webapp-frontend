@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://backend.hgadhiya.me'
+  url: 'http://hgadhiya.me'
 };
 
 /*
@@ -15,3 +15,5 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
